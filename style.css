@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+:root {
+    /* 
+    # Colors
+*/
+    /* ### Primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    /* ### Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    background-color: var(--Pale-blue);
+}
+
+a {
+    color: var(--Bright-blue);
+}
+
+a:hover {
+    color: hsla(245, 75%, 52%, 0.7);
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+a,
+h3,
+button {
+    font-weight: 700;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+main {
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+main section {
+    max-width: min-content;
+    background-color: white;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+main section .top img {
+    width: 420px;
+    border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -ms-border-radius: 15px 15px 0 0;
+    -o-border-radius: 15px 15px 0 0;
+}
+
+main section .bottom {
+    padding: 30px 40px;
+    text-align: center;
+}
+
+main section .bottom div:not(.details, .buttons, .plan),
+main section .bottom .text h1 {
+    margin-bottom: 20px;
+}
+
+main section .bottom .text p,
+main section .bottom .plan p {
+    line-height: 1.5;
+    color: var(--Desaturated-blue);
+}
+
+main section .bottom .plan {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Very-pale-blue);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+main section .bottom .plan .details {
+    margin-left: 70px;
+    position: relative;
+}
+
+main section .bottom .plan .details::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70px;
+    background-image: url(images/icon-music.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+main section .bottom .buttons button {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
+
+main section .bottom .buttons button:first-of-type {
+    background-color: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+    box-shadow: 0 10px 20px 0 hsla(245, 75%, 52%, 0.3);
+}
+
+main section .bottom .buttons button:first-of-type:hover {
+    background-color: hsla(245, 75%, 52%, 0.7);
+}
+
+main section .bottom .buttons button:last-of-type {
+    background-color: transparent;
+    color: var(--Desaturated-blue);
+}
+
+main section .bottom .buttons button:last-of-type:hover {
+    color: var(--Dark-blue);
+}
+
+@media (max-width: 800px) {
+    main {
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+
+    .plan {
+        font-size: 0.9rem;
+    }
+
+    main section .top img {
+        width: 350px;
+    }
+
+    main section .bottom .text p {
+        padding: 0 15px;
+    }
+
+    main section .bottom {
+        padding: 25px;
+        text-align: center;
+    }
+}
