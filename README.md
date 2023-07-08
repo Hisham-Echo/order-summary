@@ -94,4 +94,4 @@ This challenge is completely free. Please share it with anyone who will find it 
 https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj/hub
 
 **Live-Preview:**
-https://hisham3243.github.io/order-summary/
+https://hisham-echo.github.io/order-summary/
